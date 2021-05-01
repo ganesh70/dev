@@ -1,0 +1,7 @@
+---
+ - hosts: localhost
+   tasks:
+     - shell: cat /var/lib/jenkins/workspace/Test/test
+       register: qw
+     - debug:
+         var: qw_stdout.lines
